@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: umumwebapiwithswagger 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: umumwebapiwithswagger 
+    spec:
+      containers:
+        - name: umumwebapiwithswagger 
+          image: kailiuacr.azurecr.io/umumwebapiwithswagger
+          ports:
+          - containerPort: 80
